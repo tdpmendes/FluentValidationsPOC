@@ -123,4 +123,7 @@
   <data name="002" xml:space="preserve">
     <value>CNPJ Inválido</value>
   </data>
+  <data name="003" xml:space="preserve">
+    <value>Model Inteiro inválido, os campos devem conter valor</value>
+  </data>
 </root>

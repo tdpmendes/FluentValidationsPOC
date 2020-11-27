@@ -77,5 +77,14 @@ namespace FluentValidationsPOC.Properties {
                 return ResourceManager.GetString("002", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model Inteiro inválido, os campos devem conter valor.
+        /// </summary>
+        internal static string _003 {
+            get {
+                return ResourceManager.GetString("003", resourceCulture);
+            }
+        }
     }
 }

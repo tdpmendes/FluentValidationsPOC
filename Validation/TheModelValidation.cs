@@ -20,6 +20,15 @@ namespace FluentValidationsPOC.Validation
 
             RuleFor(x => x.Cpf).Must(ValidateCPF).WithErrorCode("001").WithMessage(rm.GetString("001"));
             RuleFor(x => x.Cnpj).Must(ValidateCNPJ).WithErrorCode("002").WithMessage(rm.GetString("002"));
+            //Aqui na realidade tantofaz
+            //pq na realidade a gente vai 
+            //validar o model inteiro
+            RuleFor(x => x.Cpf).Must((model,campo) => ValidateEntireModel(model)).WithErrorCode("003").WithMessage(rm.GetString("003"));
+        }
+
+        private bool ValidateEntireModel(TheModel m)
+        {
+            return !string.IsNullOrWhiteSpace(m.Cpf) && !string.IsNullOrWhiteSpace(m.Cnpj);
         }
 
         public bool ValidateCPF(string cpf)
